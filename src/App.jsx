@@ -1,13 +1,14 @@
-import MateriCRUD from "./materi-CRUD";
+// import MateriCRUD from "./materi-CRUD";
+// import MateriRestRouter from "./materi-REST-Router";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MateriRestRouter from "./materi-REST-Router";
+import MateriRedux from "./materi-Redux";
 
 
 function App() {
 
   return (
     <>
-      <MateriRestRouter/>
+      <MateriRedux/>
     </>
   )
 }
