@@ -23,26 +23,29 @@ const ListPage = () => {
     fetchProducts();
   }, []);
   return (
-    <Container style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
-      {loading ? (
-        <Loader />
-      ) : (
-        entities.map((item) => (
-          <Card
-            onClick={() => goToDetail(item.id)}
-            key={item.id}
-            style={{ width: "18rem", cursor: "pointer" }}
-          >
-            <Card.Img variant="top" src={item.image} />
-            <Card.Body>
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text>{item.description}</Card.Text>
-              <p>$ {item.price}</p>
-              {/* <Button variant="primary">Go somewhere</Button> */}
-            </Card.Body>
-          </Card>
-        ))
-      )}
+    <Container style={{}}>
+      <h1>Product List</h1>
+      <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
+        {loading ? (
+          <Loader />
+        ) : (
+          entities.map((item) => (
+            <Card
+              onClick={() => goToDetail(item.id)}
+              key={item.id}
+              style={{ width: "18rem", cursor: "pointer" }}
+            >
+              <Card.Img variant="top" src={item.image} />
+              <Card.Body>
+                <Card.Title>{item.title}</Card.Title>
+                <Card.Text>{item.description}</Card.Text>
+                <p>$ {item.price}</p>
+                {/* <Button variant="primary">Go somewhere</Button> */}
+              </Card.Body>
+            </Card>
+          ))
+        )}
+      </div>
     </Container>
   );
 };
